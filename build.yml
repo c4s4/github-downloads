@@ -3,5 +3,5 @@
 extends: golang
 default: [fmt, check, test]
 expose:  [fmt, check, test, release]
-# configuration: '~/.neon/github.yml'
+configuration: '~/.neon/github.yml'
 # GITHUB_TOKEN: 'abcdefghijklmnopqrstuvwxyz0123456789'
