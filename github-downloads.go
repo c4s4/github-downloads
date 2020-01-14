@@ -45,6 +45,11 @@ func parseCommandLine() (bool, bool, string, string) {
 	version := flag.Bool("version", false, "Print version")
 	flag.Parse()
 	args := flag.Args()
+	if len(args) < 2 {
+		println("ERROR: You must pass user and repo on command line")
+		println(Help)
+		os.Exit(1)
+	}
 	user := args[0]
 	repo := args[1]
 	return *help, *version, user, repo
