@@ -1,5 +1,10 @@
 # Github Downloads
 
+[![Build Status](https://travis-ci.org/c4s4/github-downloads.svg?branch=master)](https://travis-ci.org/c4s4/github-downloads)
+[![Code Quality](https://goreportcard.com/badge/github.com/c4s4/github-downloads)](https://goreportcard.com/report/github.com/c4s4/github-downloads)
+[![Codecov](https://codecov.io/gh/c4s4/github-downloads/branch/master/graph/badge.svg)](https://codecov.io/gh/c4s4/github-downloads)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 This tool prints downloads for given Github repo.
 
 ## Installation
