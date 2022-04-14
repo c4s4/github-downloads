@@ -14,13 +14,13 @@ This tool prints downloads for given Github repo.
 Unix users may download and install latest *github-downloads* release with command:
 
 ```bash
-sh -c "$(curl http://sweetohm.net/dist/github-downloads/install)"
+sh -c "$(curl https://sweetohm.net/dist/github-downloads/install)"
 ```
 
 If *curl* is not installed on you system, you might run:
 
 ```bash
-sh -c "$(wget -O - http://sweetohm.net/dist/github-downloads/install)"
+sh -c "$(wget -O - https://sweetohm.net/dist/github-downloads/install)"
 ```
 
 **Note:** Some directories are protected, even as *root*, on **MacOSX** (since *El Capitan* release), thus you can't install *github-downloads* in */usr/bin* for instance.
