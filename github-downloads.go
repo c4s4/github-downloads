@@ -79,10 +79,18 @@ func Releases(user, repo string) ([]Release, error) {
 func PrintReleases(releases []Release) {
 	total := 0
 	for _, release := range releases {
-		fmt.Printf("Release: %s\n", release.Tag)
+		subtotal := 0
 		for _, asset := range release.Assets {
-			fmt.Printf("- %s: %d\n", asset.Name, asset.Downloads)
-			total += asset.Downloads
+			subtotal += asset.Downloads
+		}
+		total += subtotal
+		fmt.Printf("Release %s: %d\n", release.Tag, subtotal)
+		if len(release.Assets) > 1 {
+			for _, asset := range release.Assets {
+				if asset.Downloads > 0 {
+					fmt.Printf("- %s: %d\n", asset.Name, asset.Downloads)
+				}
+			}
 		}
 	}
 	fmt.Printf("Total: %d\n", total)
