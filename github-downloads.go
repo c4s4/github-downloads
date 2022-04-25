@@ -75,8 +75,16 @@ func Releases(user, repo string) ([]Release, error) {
 	return releases, nil
 }
 
+// reverse a slice
+func reverse[S []E, E any](s S) {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+}
+
 // PrintReleases prints releases on terminal
 func PrintReleases(releases []Release) {
+	reverse(releases)
 	total := 0
 	for _, release := range releases {
 		subtotal := 0
